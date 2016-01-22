@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+DPKG_EXPORT_BUILDFLAGS = 1
+
+include /usr/share/dpkg/default.mk
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	./configure --prefix=/usr --mandir=/usr/share/man mipseb
+
+override_dh_auto_install:
+	dh_auto_install
+	rm -rf debian/sys161/usr/share/doc/sys161/copying.txt
+
+override_dh_installchangelogs:
+	dh_installchangelogs CHANGES

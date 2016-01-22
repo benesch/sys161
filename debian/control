@@ -1,0 +1,26 @@
+Source: sys161
+Section: devel
+Priority: optional
+Maintainer: Nikhil Benesch <nikhil.benesch@gmail.com>
+Build-Depends: debhelper (>= 9), gcc-mips-harvard-os161, binutils-mips-harvard-os161
+Standards-Version: 3.9.6
+Homepage: http://os161.eecs.harvard.edu/#sys161
+
+Package: sys161
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: MIPS machine simulator for teaching
+ System/161 is a machine simulator that provides a simplified but still
+ realistic environment for OS hacking. It is a 32-bit MIPS system
+ supporting up to 32 processors, with up to 31 hardware slots each
+ holding a single simple device (disk, console, network, etc.) It was
+ designed to support OS/161, with a balance of simplicity and realism
+ chosen to make it maximally useful for teaching. However, it also has
+ proven useful as a platform for rapid development of research kernel
+ projects.
+ . 
+ System/161 supports fully transparent debugging, via remote gdb into the
+ simulator. It also provides transparent kernel profiling, statistical
+ monitoring, event tracing (down to the level of individual machine
+ instructions) and one can connect multiple running System/161 instances
+ together into a network using a "hub" program.  
