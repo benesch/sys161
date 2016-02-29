@@ -1,3 +1,9 @@
+sys161 (2.0.7-0ubuntu2) wily; urgency=medium
+
+  * Apply patch for creating new files on emufs
+
+ -- Nikhil Benesch <nikhil.benesch@gmail.com>  Mon, 29 Feb 2016 11:24:03 -0800
+
 sys161 (2.0.7-0ubuntu1) wily; urgency=medium
 
   * Imported upstream version 2.0.7
